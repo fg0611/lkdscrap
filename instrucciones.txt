@@ -1,0 +1,32 @@
+estoy usando python y selenium quisiera que hagas una funcion con lo siguiente:
+
+
+1 - recibir una url por parametro y esperar a que cargue la pagina 
+
+2 - buscar un div con la clase "top-level-modal-container" y eliminarlo 
+
+3 - durante unos 30 segundos ejecutar un bucle while, a menos que termine antes: 
+    3.1 - hacer scroll 2 veces con un timer random de 2-3 segs
+    3.2 - buscar el boton con aria-label "See more jobs" 
+        3.2.1 - si encuentra el boton se termina el bucle anterior, ejecuta un nuevo while que se termina pasados 30 segundos, 
+             el while puede terminar antes de los 30 segundos ni no encuentra mas el boton descrito:
+            3.2.1.1 - hace click al boton con un timer random de 2-3 segs
+            3.2.1.2 - busca el boton:
+                3.2.1.2.1 - si lo encuentra repite el paso 2.1.1 y el 2.1.2
+                3.2.1.2.2 - no lo encuentra culmina el while
+
+el siguiente punto 4, deberia llenar un dataframe con las siguientes columnas: "job", "company", "location", "time"  
+
+4 - busca el elemento <ul> este es su XPATH "//*[@id="main-content"]/section[2]/ul"
+    4.1 - dentro habran elementos <li>, dentro de cada <li> buscar lo siguiente:
+        4.1.1 - elemento <h3> clase "base-search-card__title" extraer dato para "job"
+        4.1.2 - elemento <a> clase "hidden-nested-link" extraer dato para "company"
+        4.1.3 - elemento <span> con la clase "job-search-card__location" extraer dato para "location" 
+        4.1.4 - elemento <time> con la clase "job-search-card__listdate" extraer dato para "time"
+
+
+
+
+div clase
+base-card relative w-full hover:no-underline focus:no-underline base-card--link base-search-card base-search-card--link job-search-card job-search-card--active
+
