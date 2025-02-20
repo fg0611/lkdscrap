@@ -65,9 +65,6 @@ def manage_job_csv(data, file_name):
     df.to_csv(file_name, index=False)
     print(f"Se han guardado el dato URLs en {file_name}.")
 
-import os
-import pandas as pd
-
 def csv_to_df(filepath):
     # Verifica si el archivo existe y es accesible
     if os.path.exists(filepath):
